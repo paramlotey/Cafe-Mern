@@ -1,0 +1,144 @@
+/* #GOOGLE FONTS  */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600&family=Lobster+Two:wght@400;700&display=swap");
+
+/* CSS VARIABLES */
+:root {
+  --header-height: 5rem;
+
+  /* Colors */
+  --first-color: #f1a841;
+  --first-color-light: #342f27;
+  --title-color: #a95924;
+  --text-color: black;
+  --bg-color: #f7ecdd;
+  --container-color: #e1d0b8;
+  --hsla: #e1c7a3;
+
+  /* Typography */
+  --body-font: "Bricolage Grotesque", sans-serif;
+  --second-font: "Lobster Two", cursive;
+  --biggest-font-size: clamp(2rem, 1.1353rem + 3.9529vw, 4.1rem);
+  --bigger-font-size: clamp(1.8rem, 1.2647rem + 2.4471vw, 3.1rem);
+  --big-font-size: clamp(1.7rem, 1.3706rem + 1.5059vw, 2.5rem);
+  --h1-font-size: 1.7rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.4rem;
+  --largest-font-size: 1.3rem;
+  --larger-font-size: 1.2rem;
+  --large-font-size: 1.1rem;
+  --normal-font-size: 1rem;
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+
+  /* Border-radius */
+  --radius: 0.5rem;
+
+  /* Transition */
+  --transition: ease-in-out;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--second-font);
+  color: var(--title-color);
+  font-weight: var(--weight-400);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* RESUABLE CSS CLASSES */
+.grid {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  background: var(--first-color);
+  border: 2px solid var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  background-color: transparent;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.2rem;
+}
+
+.section {
+  padding-block: 7.5rem;
+}
+
+.section-title {
+  font-size: var(--big-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title::before {
+  content: attr(data-title);
+  display: block;
+  color: var(--first-color);
+  font-family: var(--second-font);
+  font-size: var(--h2-font-size);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.title-left {
+  text-align: left;
+  margin-bottom: 1rem;
+}
